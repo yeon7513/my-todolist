@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* colors */
+$bg-color: #B99470;
+$font-color: #5F6F52;
+$main-color: #FEFAE0;
+$sub-color: #A9B388;
+
+header {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 30px 0;
+  text-align: center;
+  letter-spacing: 3px;
+  box-sizing: border-box;
+  h1 {
+    display: inline-block;
+    position: relative;
+    color: transparent;
+    font-size: 50px;
+    color: $sub-color;
+    .hover-text {
+      position: absolute;
+      box-sizing: border-box;
+      content: attr(data-text);
+      color: $font-color;
+      width: 0;
+      inset: 0;
+      border-right: 12px solid $font-color;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+    &:hover .hover-text {
+      width: 100%;
+      filter: drop-shadow(0 0 23px $font-color);
+    }
+  }
+}

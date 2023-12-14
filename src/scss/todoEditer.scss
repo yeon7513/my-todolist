@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* colors */
+$bg-color: #B99470;
+$font-color: #5F6F52;
+$main-color: #FEFAE0;
+$sub-color: #A9B388;
+
+
+.editer-wrapper {
+  .add-todo {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    .new-todo {
+      width: 100%;
+      &:focus ~ label {
+        top: -10px; left: 0;
+      }
+    }
+    .hasValue {
+      top: -10px; left: 0;
+    }
+    .underline {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+    }
+  }
+
+  .add-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    .add-time-item {
+      flex: 0 0 75%;
+      .new-time {
+        width: 100%;
+        text-align: right;
+      }
+      .underline {
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 75%;
+      }
+    }
+
+    .add-time-check {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .add-btn {
+    text-align: right;
+    button {
+      padding: 10px 28px;
+      border-radius: 8px;
+    }
+  }
+}
+
